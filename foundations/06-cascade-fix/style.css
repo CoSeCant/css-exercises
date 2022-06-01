@@ -3,12 +3,30 @@
   color: hsl(0, 100%, 50%);
 }
 
+/* Here the .para needs to come before .small-para. This is because
+both <p> contain the para class, thus you must first define what you want para's
+styles and attributes are as a baseline for both paragraphs. Then, you can define 
+.small-para, since it is only found in the second paragraph and thus does not change
+or overwrite the atrributes/styles of the first paragraph, but only the 2nd one */
+.para {
+  font-size: 22px;
+}
+
 .small-para {
   font-size: 14px;
 }
 
-.para {
-  font-size: 22px;
+/* Just like before you need to define the attributes of the class which is found in both
+of the buttons. In this case, the class .button is found in both the buttons, thus you
+must define its attributes first in order to create a baseline style for the buttons. 
+Since you want the confirm button to differ from the baseline button style, you must now
+define the .confirm class. Since it is only defined in the confirm button in the HTML file,
+any style changes you commit here will only show up in the confirm button, which is why you must 
+define it after .button in the CSS file */
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .confirm {
@@ -17,18 +35,16 @@
   font-weight: bold;
 } 
 
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
-  color: red;
-  font-size: 14px;
-}
-
-div.text {
+/* Here we first defined the attributes/styles for the text class since it is the
+ancestor class within the descendant combinator. Next we used the descendant combinator
+to access the child class, ultimately changing the style of the <div> from the parent/ancestor
+attributes, to it's own unique attributes (red font and smaller size) */
+.text {
   color: green;
   font-size: 22px;
+}
+
+.text .child {
+  color: red;
+  font-size: 14px;
 }
