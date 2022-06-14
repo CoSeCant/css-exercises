@@ -7,21 +7,35 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px; /* This adds space between the blue boxes, and the edge of the card */
 }
 
 .title {
-  background: #e3f4ff;
+  background: #c0e0f5;
+  font-size: 16px;
+  margin-top: 0px; 
+  margin-bottom: 8px; /* This is used to add space between the blue boxes and one another */
+  padding: 8px; /* This is used to move around the text within the title blue box */
 }
 
 .content {
-  background: #e3f4ff;
+  background: #c0e0f5;
+  margin-bottom: 8px;
+  padding: 16px 8px; /* For here, the syntax is padding: top/bottom padding , left/right padding */
+  /* Originally I had typed out padding-top, padding-bottom, etc. and put in the values sperately,
+  however, the above method is much more concise */
 }
 
 .button-container {
-  background: #e3f4ff;
+  background: #c0e0f5;
+  padding: 8px;
+  text-align: center; /* This is used to center the contents of the button container */
 }
 
 button {
   background: white;
   border: 1px solid #eee;
+  display: block; /* This seperates the button from the text "and a" into two seperate blocks */
+  margin: 0 auto; /* This is used to center the button */
+  padding: 8px 24px;
 }
