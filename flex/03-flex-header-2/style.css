@@ -12,6 +12,11 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  padding: 8px;
+  justify-content: space-between; /* This acted as the space between the two main containers that we have
+                                  in our heading: the container consisting of the logo and links, and the 
+                                  container consisting of the notifications and profile image */
 }
 
 .profile-image {
@@ -45,4 +50,18 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  /* Padding and margin were set to zero for the items found in the list, since there is 
+  some predetermined padding that comes with displaying items in a list */
+  padding: 0px; 
+  margin: 0px;
+  gap: 16px; /* This was used to adding 10px of space between the links found withing the ul flex container */
+}
+
+.section {
+  display: flex; 
+  gap: 16px; /* This was used in order to add 10px of space between the items found in each of the two main sub-flex containers
+              For instance, this added 10px of space between the logo and the links, while also adding 10px of space between the 
+              notification bar and profile image in the other sub-flex container */
+  align-items: center; /* This was used in order to vertically center the two sub-flex containers on the header (aka. the main flex container) */
 }
